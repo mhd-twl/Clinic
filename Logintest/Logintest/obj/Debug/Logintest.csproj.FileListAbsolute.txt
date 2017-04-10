@@ -1,0 +1,40 @@
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\bin\Debug\Logintest.exe.config
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\bin\Debug\Logintest.exe
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\bin\Debug\Logintest.pdb
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.exe
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.pdb
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\bin\Debug\Medical_Center.mdf
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\bin\Debug\Medical_Center_log.ldf
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.Emp_Profile.resources
+c:\users\admin\documents\visual studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.ActionTracer.resources
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.AddEmployeeForm.resources
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.LogInForm.resources
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\Logintest\Logintest\obj\Debug\Logintest.PatientProfile.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.csprojResolveAssemblyReference.cache
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.ActionTracer.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.AddEmployeeForm.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.Doctor_profile.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.Examination.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.LogInForm.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.Searcher.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.Notes.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.Nurse_Profile.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.PatientProfile.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.Properties.Resources.resources
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.csproj.GenerateResource.Cache
+C:\Users\Std\Desktop\Logintest\Logintest\obj\Debug\Logintest.exe
+C:\Users\Std\Desktop\Logintest\Logintest\bin\Debug\Logintest.exe.config
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\bin\Debug\Logintest.exe.config
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.ActionTracer.resources
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.AddEmployeeForm.resources
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.Doctor_profile.resources
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.Examination.resources
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.LogInForm.resources
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.Notes.resources
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.Nurse_Profile.resources
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.PatientProfile.resources
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.Properties.Resources.resources
+I:\Private\MyFiles\lectures\Old Subjects\SWE2\SWE2s-LAB\Logintest\Logintest\obj\Debug\Logintest.csproj.GenerateResource.Cache

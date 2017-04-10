@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Medical_Center" Class="linkDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Medical_Center.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="Logintest.Properties.Settings" SettingsPropertyName="Medical_CenterConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="Emp_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Emp_FirstName" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Emp_MiddleName" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Emp_LastName" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Emp_Address" Type="System.String" DbType="NChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Emp_PhoneNum" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Emp_Birthdate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Emp_Gender" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_Nurse" Member="Nurses" ThisKey="Emp_id" OtherKey="Emp_id" Type="Nurse" />
+      <Association Name="Employee_Secritary" Member="Secritaries" ThisKey="Emp_id" OtherKey="Emp_id" Type="Secritary" />
+      <Association Name="Employee_Doctor" Member="Doctors" ThisKey="Emp_id" OtherKey="Emp_id" Type="Doctor" />
+      <Association Name="Employee_ActionRecord" Member="ActionRecords" ThisKey="Emp_id" OtherKey="Emp_id" Type="ActionRecord" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Nurse" Member="Nurses">
+    <Type Name="Nurse">
+      <Column Name="N_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Extra_info" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Emp_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Grad_year" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_Nurse" Member="Employee" ThisKey="Emp_id" OtherKey="Emp_id" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Secritary" Member="Secritaries">
+    <Type Name="Secritary">
+      <Column Name="Sec_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Emp_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Extra_info" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Grad_year" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_Secritary" Member="Employee" ThisKey="Emp_id" OtherKey="Emp_id" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Doctor" Member="Doctors">
+    <Type Name="Doctor">
+      <Column Name="Spec" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Doc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Emp_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Extra_info" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Grad_year" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Is_admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_Doctor" Member="Employee" ThisKey="Emp_id" OtherKey="Emp_id" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActionRecord" Member="ActionRecords">
+    <Type Name="ActionRecord">
+      <Column Name="Action_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Emp_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Patient_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Action_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Employee_ActionRecord" Member="Employee" ThisKey="Emp_id" OtherKey="Emp_id" Type="Employee" IsForeignKey="true" />
+      <Association Name="Patient_ActionRecord" Member="Patient" ThisKey="Patient_id" OtherKey="p_id" Type="Patient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patient" Member="Patients">
+    <Type Name="Patient">
+      <Column Name="p_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="P_fname" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="P_lname" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="P_MobileNum" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Fin_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Patient_ActionRecord" Member="ActionRecords" ThisKey="p_id" OtherKey="Patient_id" Type="ActionRecord" />
+      <Association Name="Patient_App_data" Member="App_datas" ThisKey="p_id" OtherKey="P_id" Type="App_data" />
+      <Association Name="FincialRecord_Patient" Member="FincialRecord" ThisKey="p_id" OtherKey="P_id" Type="FincialRecord" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FincialRecord" Member="FincialRecords">
+    <Type Name="FincialRecord">
+      <Column Name="P_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Payed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShouldPay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FincialRecord_Patient" Member="Patient" ThisKey="P_id" OtherKey="p_id" Type="Patient" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.App_data" Member="App_datas">
+    <Type Name="App_data">
+      <Column Name="P_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="App_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Examination_data" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Result_data" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Patient_App_data" Member="Patient" ThisKey="P_id" OtherKey="p_id" Type="Patient" IsForeignKey="true" />
+      <Association Name="Appointment_App_data" Member="Appointment" ThisKey="App_id" OtherKey="App_id" Type="Appointment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Appointment" Member="Appointments">
+    <Type Name="Appointment">
+      <Column Name="Patient_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="App_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="App_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Appointment_App_data" Member="App_datas" ThisKey="App_id" OtherKey="App_id" Type="App_data" />
+    </Type>
+  </Table>
+</Database>
